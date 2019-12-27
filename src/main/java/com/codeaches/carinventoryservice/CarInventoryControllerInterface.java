@@ -22,5 +22,4 @@ public interface CarInventoryControllerInterface {
   @ApiResponses(value = {
       @ApiResponse(code = 200, message = "List of Cars returned successfully", response = Set.class, responseContainer = "Set<String>") })
   public Set<String> viewCars();
-
 }
