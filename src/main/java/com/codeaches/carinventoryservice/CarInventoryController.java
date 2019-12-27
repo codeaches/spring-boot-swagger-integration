@@ -11,15 +11,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class CarInventoryController implements CarInventoryControllerInterface {
 
-  @GetMapping("viewCars")
-  public Set<String> viewCars() {
-    return cars;
-  }
-
   @PostMapping("addCar")
   public String addCar(@RequestBody String car) {
     cars.add(car);
     return car;
+  }
+
+  @GetMapping("viewCars")
+  public Set<String> viewCars() {
+    return cars;
   }
 
   static Set<String> cars = new HashSet<>();
